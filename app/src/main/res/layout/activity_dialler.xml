@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_makeCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Call"
+        android:textSize="@dimen/_20sdp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Context"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        />
+
+    <EditText
+        android:id="@+id/et_diallercc"
+        android:layout_below="@+id/et_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Country Code(eg 91)"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <EditText
+        android:id="@+id/et_diallerPhone"
+        android:layout_below="@+id/et_diallercc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <EditText
+        android:id="@+id/et_diallerCuid"
+        android:layout_below="@+id/et_diallerPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cuid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_diallerCuid"
+        android:layout_toLeftOf="@+id/sw_autofallback"
+        android:text="Auto Fallback"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/sw_autofallback"
+        android:gravity="center"
+        />
+    <Switch
+        android:id="@+id/sw_autofallback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_diallerCuid"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"/>
+
+    <Button
+        android:id="@+id/bt_callVoip"
+        android:layout_below="@+id/sw_autofallback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Voip Call"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp" />
+
+    <Button
+        android:id="@+id/bt_callVoipAutofallback"
+        android:layout_below="@+id/bt_callVoip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Voip with Autofallback"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp" />
+
+    <Button
+        android:id="@+id/bt_callPstn"
+        android:layout_below="@+id/bt_callVoipAutofallback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Call PSTN"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp" />
+
+    <Button
+        android:id="@+id/bt_callPurePstn"
+        android:layout_below="@+id/bt_callPstn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Call PSTN to PSTN"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/bt_clear"
+        android:layout_below="@+id/bt_callPurePstn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Logout"
+        android:textColor="@android:color/white"/>
+
+    <!--<Button-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/bt_message"-->
+    <!--android:layout_below="@+id/bt_clear"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="@dimen/_2sdp"-->
+    <!--android:layout_marginLeft="@dimen/_20sdp"-->
+    <!--android:layout_marginStart="@dimen/_20sdp"-->
+    <!--android:layout_marginEnd="@dimen/_20sdp"-->
+    <!--android:layout_marginRight="@dimen/_20sdp"-->
+    <!--android:background="@android:color/holo_blue_light"-->
+    <!--android:text="send Message"-->
+    <!--android:textColor="@android:color/white"/>-->
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:layout_below="@+id/bt_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Help"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"/>
+
+    <TextView
+        android:id="@+id/tv_clause1"
+        android:layout_below="@+id/tv_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:textColor="@android:color/black"
+        android:text="** Country code and phone should contain only number and no special characters."
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_clause2"
+        android:layout_below="@+id/tv_clause1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:textColor="@android:color/black"
+        android:text="** Context is the reason of the call. It can be alphanumeric"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        android:alpha="0.8">
+
+        <TextView
+            android:id="@+id/tv_unavailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Callee is unavailable. Please fallback on PSTN"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp"
+            android:padding="@dimen/_16sdp"
+            />
+        <Button
+            android:id="@+id/bt_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dismiss"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/holo_blue_bright"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/tv_unavailable"
+            android:layout_marginRight="@dimen/_16sdp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
