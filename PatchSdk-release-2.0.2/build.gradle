@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('PatchSdk-release-2.0.2.aar'))
